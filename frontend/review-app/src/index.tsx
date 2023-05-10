@@ -6,13 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import NavBar from './components/NavBar';
 import ItemReview from './components/ItemReview';
 import ProductDisplayed from './components/ProductDisplayed';
+import  ProductPage  from './components/try';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <NavBar/>
+    <ProductPage/>
 
   </React.StrictMode>
 );
