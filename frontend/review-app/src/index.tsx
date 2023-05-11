@@ -4,9 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import NavBar from './components/NavBar';
-import ItemReview from './components/ItemReview';
-import ProductDisplayed from './components/ProductDisplayed';
-import  ProductPage  from './components/try';
+// import ItemReview from './components/ItemReview';
+import ProductPage from './components/ProductDisplay';
 
 
 const root = ReactDOM.createRoot(
@@ -14,7 +13,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <ProductPage/>
+    <ProductPage />
 
   </React.StrictMode>
 );

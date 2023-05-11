@@ -1,11 +1,15 @@
 import { Box, Button, Container, Grid, Paper, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import bookImage from './book.jpg'
+import bookImage from './images/cursedchild.jpg'
+import Footer from './Footer';
+import NavBar from './NavBar';
+import ItemReview from './ItemReview';
 
 const ProductPhoto = styled('img')({
     maxWidth: '100%',
     height: 'auto',
 });
+
 
 export default function ProductPage() {
     return (
@@ -38,10 +42,10 @@ export default function ProductPage() {
                                 <Typography variant="h5" sx={{ mb: 2 }}>
                                     $99.99
                                 </Typography>
-                                <Button variant="contained" sx={{ mr: 2 }}>
+                                <Button color='error' variant="contained" sx={{ mr: 2 }} >
                                     Buy Now
                                 </Button>
-                                <Button variant="outlined">Add Review</Button>
+                                <Button color='error' variant="outlined">Add Review</Button>
                             </Paper>
                         </Grid>
                     </Grid>
@@ -52,7 +56,7 @@ export default function ProductPage() {
                                     Product Reviews
                                 </Typography>
                                 <Typography variant="body1" sx={{ mb: 2 }}>
-                                    No reviews yet. Be the first to write a review!
+                                    <ItemReview />
                                 </Typography>
                             </Paper>
                         </Grid>
@@ -64,20 +68,3 @@ export default function ProductPage() {
     );
 };
 
-const NavBar = () => {
-    return (
-        <Paper elevation={0} sx={{ p: 2 }}>
-            <Typography variant="h6">My Product Page</Typography>
-        </Paper>
-    );
-};
-
-const Footer = () => {
-    return (
-        <Paper elevation={0} sx={{ p: 2 }}>
-            <Typography variant="body2" align="center">
-                © 2023 My Company. All rights reserved.
-            </Typography>
-        </Paper>
-    );
-};
