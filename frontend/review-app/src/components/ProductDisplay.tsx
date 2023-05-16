@@ -5,6 +5,7 @@ import Footer from './Footer';
 import NavBar from './NavBar';
 import ItemReview from './ItemReview';
 
+
 const ProductPhoto = styled('img')({
     maxWidth: '100%',
     height: 'auto',
@@ -61,6 +62,7 @@ export default function ProductPage() {
                             </Paper>
                         </Grid>
                     </Grid>
+
                 </Container>
                 <Footer />
             </Box>

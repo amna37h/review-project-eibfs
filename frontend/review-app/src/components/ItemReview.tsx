@@ -1,4 +1,5 @@
 import { Box, Paper, Rating, Typography } from '@mui/material';
+import Button from "@mui/material/Button";
 
 
 export default function ItemReview() {
@@ -43,6 +44,9 @@ export default function ItemReview() {
                         Not the best quality.
                     </Typography>
                 </Box>
+                <Button variant="contained" color="error">
+                    Add a Review
+                </Button>
 
 
             </Box>
