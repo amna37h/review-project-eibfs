@@ -5,6 +5,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
+
+
 export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1, mb: 10 }}>
@@ -13,7 +15,7 @@ export default function NavBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Book Reviewer
           </Typography>
-          <Button color="inherit">Home</Button>
+          <Button href="/Home" color="inherit">Home</Button>
           <Button color="inherit">About</Button>
           <Button color="inherit">Login</Button>
         </Toolbar>
