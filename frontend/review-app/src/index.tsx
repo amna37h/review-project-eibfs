@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import ProductPage from './components/ProductDisplay';
 import Routing from './components/Routing';
+import NavBar from './components/NavBar';
 
 
 const root = ReactDOM.createRoot(
@@ -11,6 +12,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    <NavBar />
     <Routing />
   </React.StrictMode>
 );

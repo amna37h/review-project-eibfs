@@ -1,5 +1,6 @@
 import { makeStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 interface BookProps {
     image: string;
@@ -12,18 +13,23 @@ const useStyles = makeStyles({
         position: "relative",
         display: "inline-block",
         margin: "10px",
-        "&:hover $title": {
+        "&:hover $title ": {
             opacity: 1,
+        },
+        "&:hover $image": {
+            filter: "blur(2px)",
         },
     },
     image: {
         display: "block",
-        maxWidth: "100%",
-        height: "auto",
+        width: "250px",
+        height: "400px",
+        objectFit: "cover",
+
     },
     title: {
         position: "absolute",
-        bottom: "10px",
+        bottom: "0px",
         left: 0,
         right: 0,
         backgroundColor: "rgba(0,0,0,0.6)",
@@ -40,9 +46,11 @@ export default function Book({ image, title }: BookProps) {
     return (
         <div className={classes.book}>
             <img className={classes.image} src={image} alt={title} />
-            <div className={classes.title}>
-                <Typography variant="h6">{title}</Typography>
-            </div>
+            <Link to={{ pathname: '/ProductDisplay' }}>
+                <div className={classes.title}>
+                    <Typography variant="h6">{title}</Typography>
+                </div>
+            </Link>
         </div>
     );
 }

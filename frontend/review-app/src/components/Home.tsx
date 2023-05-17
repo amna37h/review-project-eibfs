@@ -1,30 +1,54 @@
 import { Grid } from "@mui/material";
 import Book from "./Book";
 
+
 const books = [
     {
         id: 1,
-        title: "The Great Gatsby",
-        image: "https://picsum.photos/id/237/200/300",
+        title: "The Lord of the Rings: The Fellowship Of The Ring",
+        image: "https://i.redd.it/pu1i0ekgyhu81.jpg",
     },
     {
         id: 2,
-        title: "To Kill a Mockingbird",
-        image: "https://picsum.photos/id/238/200/300",
+        title: "Fire And Blood 300 Years Before A Game Of Thrones",
+        image: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR9E7ffRvBI8V4C-xbiidEgMQS5-zwcXMdkEiuVTfWmAKiAuJDr",
     },
     {
         id: 3,
-        title: "The Catcher in the Rye",
-        image: "https://picsum.photos/id/239/200/300",
+        title: "The Rigtheous | Renee Ahdieh",
+        image: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSxIHchTcDIM_yoap63IQvwOP9ReNEpK0Nn8KaCQ47zZAt3utYf",
     },
+    {
+        id: 4,
+        title: "The Queen's Gambit | Tevis Walter",
+        image: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR2Jxr8KMvWLD-SbcsLDXWItO2a68cBpzeAupO1Pux5yWrlY24X",
+    },
+    {
+        id: 5,
+        title: "Harry Potter And The Cursed Child",
+        image: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTIcNCg8WptPke8RJhZIjWT7d4HKANYqSOzEteFyJUdx2R5S6kY",
+    },
+    {
+        id: 6,
+        title: "Dance With Dragons | George R.R. Martin",
+        image: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTtlQLnilHC3qBhmpVAqOAXmaV4gw7ZPcMNapQh-GGOzKDCHdAo",
+    },
+
+
+
+
 ];
 
 export default function Home() {
     return (
-        <Grid container spacing={2}>
+
+
+        <Grid container spacing={2} direction="row" justifyContent="center" alignItems="center">
             {books.map((book) => (
-                <Grid item xs={12} sm={6} md={4} key={book.id}>
-                    <Book image={book.image} title={book.title} />
+                <Grid item xs={4} key={book.id}>
+                    <div style={{ textAlign: "center" }}>
+                        <Book image={book.image} title={book.title} />
+                    </div>
                 </Grid>
             ))}
         </Grid>
