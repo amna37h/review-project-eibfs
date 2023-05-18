@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 
 
 
+
 export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1, mb: 10 }}>
@@ -16,8 +17,7 @@ export default function NavBar() {
             Book Reviewer
           </Typography>
           <Button href="/Home" color="inherit">Home</Button>
-          <Button color="inherit">About</Button>
-          <Button color="inherit">Login</Button>
+
         </Toolbar>
       </AppBar>
     </Box>

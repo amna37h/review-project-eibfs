@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ProductPage from './components/ProductDisplay';
+import BookDisplay from './components/BookDisplay';
 import Routing from './components/Routing';
 import NavBar from './components/NavBar';
 
