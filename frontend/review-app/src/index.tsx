@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import BookDisplay from './components/BookDisplay';
 import Routing from './components/Routing';
 import NavBar from './components/NavBar';
+import AddReview from './components/AddReview';
 
 
 const root = ReactDOM.createRoot(
@@ -14,6 +14,7 @@ root.render(
   <React.StrictMode>
     <NavBar />
     <Routing />
+
   </React.StrictMode>
 );
 

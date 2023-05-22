@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 interface BookProps {
     image: string;
     title: string;
-    discription: string;
+    description: string;
 }
 
 const useStyles = makeStyles({
@@ -39,7 +39,7 @@ const useStyles = makeStyles({
     },
 });
 
-export default function Book({ image, title, discription }: BookProps) {
+export default function Book({ image, title, description }: BookProps) {
     const classes = useStyles();
 
 
@@ -48,7 +48,7 @@ export default function Book({ image, title, discription }: BookProps) {
         <div className={classes.book}>
             <img className={classes.image} src={image} alt={title} />
             <Link
-                to={`/BookDisplay?title=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&discription=${encodeURIComponent(discription)}`}
+                to={`/BookDisplay?title=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&description=${encodeURIComponent(description)}`}
             >
                 <div className={classes.title}>
                     <Typography variant="h6">{title}</Typography>
