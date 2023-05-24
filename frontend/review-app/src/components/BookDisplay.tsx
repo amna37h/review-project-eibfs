@@ -45,9 +45,6 @@ export default function BookDisplay() {
         return null; // or return a loading state or placeholder component
     }
 
-    console.log("display page", description);
-    console.log("display page", title);
-    console.log("display page", image);
 
     const handleOpenReviewForm = () => {
         setIsReviewFormOpen(true);

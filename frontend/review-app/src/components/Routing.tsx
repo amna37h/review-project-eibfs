@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./NavBar";
 import Home from "./Home";
-import Book from "./Book";
-import BookReviews from "./BookReviews";
+
 import BookDisplay from "./BookDisplay";
 
 export default function App() {
