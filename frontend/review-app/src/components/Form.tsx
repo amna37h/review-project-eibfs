@@ -15,16 +15,17 @@ import axios from "axios";
 interface AddReviewFormProps {
   open: boolean;
   onClose: () => void;
+  bookId: string; // Add bookId prop
 }
 
-const AddReviewForm: React.FC<AddReviewFormProps> = ({ open, onClose }) => {
+const AddReviewForm: React.FC<AddReviewFormProps> = ({ open, onClose, bookId }) => {
   const [username, setUsername] = useState("");
   const [reviewContent, setReviewContent] = useState("");
   const [rating, setRating] = useState<number>(0);
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    axios.post("http://localhost:8020/addReview", { username, reviewContent, rating })
+    axios.post("http://localhost:8020/addReview", { username, reviewContent, rating, bookId })
       .then(() => {
         onClose();
       })
@@ -82,7 +83,6 @@ const AddReviewForm: React.FC<AddReviewFormProps> = ({ open, onClose }) => {
                 }}
                 max={5}
               />
-
             </Grid>
           </Grid>
           <DialogActions>

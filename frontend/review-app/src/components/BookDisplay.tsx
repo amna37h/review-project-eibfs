@@ -36,6 +36,10 @@ export default function BookDisplay() {
     const title = searchParams.get("title") || "";
     const image = searchParams.get("image") || "";
     const description = searchParams.get("description") || "";
+    const book_id = searchParams.get("book_id") || "";
+
+    console.log(title);
+    console.log(book_id);
 
     const [isReviewFormOpen, setIsReviewFormOpen] = useState(false);
 
@@ -87,7 +91,7 @@ export default function BookDisplay() {
 
             {/* Render the AddReviewForm component conditionally */}
             {isReviewFormOpen && (
-                <AddReviewForm open={isReviewFormOpen} onClose={handleCloseReviewForm} />
+                <AddReviewForm open={isReviewFormOpen} onClose={handleCloseReviewForm} bookId={book_id} />
             )}
         </>
     );

@@ -37,7 +37,7 @@ export default function Home() {
             {books && books.map((book, key) => (
                 <Grid item xs={4} key={key}>
                     <div style={{ textAlign: "center" }}>
-                        <Book image={book.book_Image} title={book.book_name} description={book.book_description} />
+                        <Book image={book.book_Image} title={book.book_name} description={book.book_description} book_id={book.book_ID} />
                     </div>
                 </Grid>
             ))}

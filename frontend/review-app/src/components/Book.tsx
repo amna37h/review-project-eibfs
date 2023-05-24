@@ -6,6 +6,7 @@ interface BookProps {
     image: string;
     title: string;
     description: string;
+    book_id: number;
 }
 
 const useStyles = makeStyles({
@@ -39,8 +40,9 @@ const useStyles = makeStyles({
     },
 });
 
-export default function Book({ image, title, description }: BookProps) {
+export default function Book({ image, title, description, book_id }: BookProps) {
     const classes = useStyles();
+
 
 
 
@@ -48,7 +50,7 @@ export default function Book({ image, title, description }: BookProps) {
         <div className={classes.book}>
             <img className={classes.image} src={image} alt={title} />
             <Link
-                to={`/BookDisplay?title=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&description=${encodeURIComponent(description)}`}
+                to={`/BookDisplay?title=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&description=${encodeURIComponent(description)}&book_id=${encodeURIComponent(book_id)}`}
             >
                 <div className={classes.title}>
                     <Typography variant="h6">{title}</Typography>
