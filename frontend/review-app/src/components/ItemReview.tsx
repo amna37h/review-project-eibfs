@@ -37,16 +37,18 @@ interface Review {
     username: string;
     user_review: string;
     review_rate: number;
-
 }
 
-const ItemReview = () => {
+interface ItemReviewProps {
+    bookId: string;
+}
+
+const ItemReview: React.FC<ItemReviewProps> = ({ bookId }) => {
     const [reviews, setReviews] = useState<Review[]>([]);
 
     useEffect(() => {
-        console.log("reched");
-        // Fetch reviews from the backend
-        axios.get<Review[]>("http://localhost:8020/reviews")
+        // Fetch reviews from the backend for the specified bookId
+        axios.get<Review[]>(`http://localhost:8020/reviews?bookId`, { params: { itemId: bookId } })
             .then(response => {
                 setReviews(response.data);
                 console.log(response.data);
@@ -54,7 +56,7 @@ const ItemReview = () => {
             .catch(error => {
                 console.log(error);
             });
-    }, []);
+    }, [bookId]);
 
     const handleScroll = (scrollOffset: number) => {
         const container = document.getElementById('reviewListContainer');

@@ -82,7 +82,7 @@ export default function BookDisplay() {
                     </Grid>
                     <Grid container spacing={2} sx={{ mt: 2 }}>
                         <Grid item xs={12}>
-                            <ItemReview />
+                            <ItemReview bookId={book_id} />
                         </Grid>
                     </Grid>
                 </Container>
